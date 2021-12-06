@@ -1,0 +1,153 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 06/02/2019 13:31
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticond41d.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon.html") format("woff2"),
+       url("../fonts/Flaticon.woff") format("woff"),
+       url("../fonts/Flaticon-2.html") format("truetype"),
+       url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+font-style: normal;
+}
+
+.flaticon-paint-palette:before { content: "\f100"; }
+.flaticon-paintbrush:before { content: "\f101"; }
+.flaticon-tea:before { content: "\f102"; }
+.flaticon-quote:before { content: "\f103"; }
+.flaticon-heart:before { content: "\f104"; }
+.flaticon-diamond:before { content: "\f105"; }
+.flaticon-diamond-1:before { content: "\f106"; }
+.flaticon-target:before { content: "\f107"; }
+.flaticon-bell:before { content: "\f108"; }
+.flaticon-plus:before { content: "\f109"; }
+.flaticon-pin:before { content: "\f10a"; }
+.flaticon-target-1:before { content: "\f10b"; }
+.flaticon-support:before { content: "\f10c"; }
+.flaticon-target-2:before { content: "\f10d"; }
+.flaticon-target-3:before { content: "\f10e"; }
+.flaticon-like:before { content: "\f10f"; }
+.flaticon-spread:before { content: "\f110"; }
+.flaticon-coffee-cup:before { content: "\f111"; }
+.flaticon-quote-1:before { content: "\f112"; }
+.flaticon-pie-chart:before { content: "\f113"; }
+.flaticon-chart:before { content: "\f114"; }
+.flaticon-aim:before { content: "\f115"; }
+.flaticon-diet:before { content: "\f116"; }
+.flaticon-tomato:before { content: "\f117"; }
+.flaticon-pumpkin:before { content: "\f118"; }
+.flaticon-vegetarian:before { content: "\f119"; }
+.flaticon-garlic:before { content: "\f11a"; }
+.flaticon-fruit:before { content: "\f11b"; }
+/*next css*/@import "bourbon";
+
+/*$social-color-pallete: (
+     facebook: #3b5998,
+     twitter: #00aced,
+     youtube: #df1c31,
+);*/
+
+$social-default-icon-color: #00ffff;
+$social-default-btn-color: #ffff00;
+$social-icon-size: 30px;
+$social-icon-border: 2px;
+$social-icon-border-radius: 3px;
+
+$brand-color: #006FC2;
+.icon-link {
+    width: $social-icon-size;
+    height: $social-icon-size;
+    background-color: $social-default-btn-color;
+    line-height: $social-icon-size;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    margin: 5px;
+   @include box-sizing(content-box);
+    
+    &.fill {
+      @each $social-alias, $social-color in $social-color-pallete {
+        &.#{$social-alias} {
+          background-color: $social-color;
+          &:hover {
+            background-color: #fff;
+            .fa-#{$social-alias} {
+              color: $social-color;
+              @include transition(color 150ms ease-in-out);
+            }
+          }
+        }
+      }
+    }
+  
+  &.brand {
+    background-color: #fff;
+    .fa {
+      color: $brand-color;
+    }
+  }
+    
+    &.round {
+      border-radius: 50%;
+    }
+    
+    &.round-corner {
+      border-radius: $social-icon-border-radius;
+    }
+  
+    &:hover {
+      @include transition(background-color 150ms ease-in-out);
+      height: $social-icon-size - $social-icon-border * 2;
+      line-height: $social-icon-size - $social-icon-border * 2;
+      width: $social-icon-size - $social-icon-border * 2;
+      background-color: #fff;
+      
+      @each $social-alias, $social-color in $social-color-pallete {
+        &.#{$social-alias} {
+          border: $social-icon-border solid $social-color;
+        }
+      }
+      
+      .fa {
+        line-height: $social-icon-size - $social-icon-border * 2;
+      }
+      
+      @each $social-alias, $social-color in $social-color-pallete {
+        .fa-#{$social-alias} {
+            color: $social-color;
+            @include transition(color 150ms ease-in-out);
+        }
+      }
+  }
+  
+  .fa{ 
+    color: $social-default-icon-color;
+    line-height: $social-icon-size;
+    font-size: $social-icon-size - $social-icon-size * 0.40;
+  }
+}
+
+.brand-icons {
+  background-color: #ddd;
+  padding: 10px 0;
+}
+

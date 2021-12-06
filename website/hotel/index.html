@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Avanni">
+
+    <!-- ========== Page Title ========== -->
+    <title>Donate food </title>
+
+    <!-- ========== Favicon Icon ========== -->
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/107525cc11.js"></script>
+   <style type="text/css">
+            
+            .model{
+            box-shadow: 4px 3px 14px 7px lightgray;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%, -50%);
+       }
+       input[type='text'],select{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    outline: none;
+  }
+/*  #btns{
+    display: none;
+  }*/
+        </style>
+  
+</head>
+<body>
+    <div style="background-color: skyblue;" class="p-4">
+        <h4 class="p-2" style="float: left;">Welcome Username</h4>
+        <div class="p-4">
+        <button class="btn btn-danger" style="float: right;">Logout</button>
+       </div>
+    </div>  
+    </div>
+  <div id="form" class="model"><br>
+            <h4 class="text-center p-2" style="">Donate food</h4>
+        <form action="" method="post" style="padding: 30px;">
+            <div>
+                <label for="meal">Select meal type</label>
+                <select name="meal" required>
+                    <option></option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+            </div>
+            <div class="mt-4" >
+                <label id="height">Items in plate</label><br>
+                <input type="text" name="height" id="height" required>
+            </div>
+            <div class="" style="padding-top: 10px;">
+                <label for="weight">Quantity of plates</label><br>
+                <input type="text" name="weight" id="weight" required>
+            </div>
+            <div align="center" class="pt-4">
+                <input type="submit" id="submit" class="btn btn-success" name="submit" value="Donate" style="padding-left: 4em;padding-right: 4em;">
+            </div>
+        </form>
+         <!-- <h5 class="text-center text-success">Your report is <?php echo"$res";?></h5> -->
+    </div>
+
+</body>
+</html>
